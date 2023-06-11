@@ -1,0 +1,13 @@
+image: cypress/base:16.13.0
+
+# test gitlab
+
+test:
+    stage: test
+    parallel: 3
+    script:
+        - npm install
+        - npm run build:and:test
+    artifacts:
+      paths:
+        - "cypress/videos"
