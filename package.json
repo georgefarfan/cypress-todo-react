@@ -18,12 +18,13 @@
         "start:frontend": "react-scripts start",
         "start:server": "json-server -p 8080 db.json -m ./node_modules/json-server-auth -r routes.json",
         "start": "npm-run-all --parallel start:server start:frontend",
-        "cyrun": "npx cypress run --record --key 8a918215-83b6-4927-916e-f3a5ac00fb76",
-        "build:and:test": "start-server-and-test start http://localhost.3000 cyrun",
+        "cy:run": "npx cypress run --record --key 8a918215-83b6-4927-916e-f3a5ac00fb76",
+        "build:and:test": "start-server-and-test start http://localhost.3000 cy:run",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "e22:chrome": "cypress run --browser chrome --headless",
-        "e22:firefox": "cypress run --browser firefox --headless"
+        "e22:firefox": "cypress run --browser firefox --headless",
+        "run:docker": "docker build -f Dockerfile -t todoappcypress ."
     }
 }
