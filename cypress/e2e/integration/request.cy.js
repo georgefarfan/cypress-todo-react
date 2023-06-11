@@ -53,7 +53,7 @@ describe('Request command suite', () => {
         })
     })
 
-    xit('securet ', () => {
+   xit('securet ', () => {
         cy.request({
             method: 'GET',
             url: 'http://localhost:8080/courses',
